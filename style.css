@@ -277,5 +277,33 @@ a:hover {
     position: absolute;
     font-size: 2rem;
     right: 1rem;
+}
 
+.accordion-item-header.active::after {
+    content: "\2212";
+}
+
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}  
+
+
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, #008f68, #fae042) 1;
+}
+
+
+/*.accordion-item-header.active + .accordion-item-body {
+   max-height: 1000px;
+}*/
+
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
 }
